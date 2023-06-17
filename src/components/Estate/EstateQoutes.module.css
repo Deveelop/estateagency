@@ -2,21 +2,44 @@
 .qoutes{
     margin-top: -55px;
     width: 100%;
-    overflow: scroll;
+    overflow: hidden;
     height: 100vh;
-   background-color: black;
+   background: linear-gradient(rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.5)), url(../../../public/images/wallpaper.jpg);
 
 }
-.qoutes img{
+/* .qoutes img{
      width: 110%;
     height: 100%;
     object-fit: cover;
     opacity: 0.2;  
-}
-.post{
-    position: relative;
-    z-index: 1;
+} */
+ .post{
+    text-align: center;
+    max-width: 45rem;
+    width: 90%;
+    margin: auto;
+    margin-top: 10rem;
     color: white;
-    left: 50ex;
-    top: 25rex;
+    padding: 1rem; 
+    transition: 300ms ease;
+
+    /* width: 100%;
+    max-width: 468px;
+    margin: 50px auto;
+    margin-top: 10%;
+    color: white; */
+    
+}
+.slider{
+    display: flex;
+    justify-content: center;
+}
+.slider input[type='radio']{
+    width: 1.2rem;
+    height: 1.2rem;
+  border-radius: 50%;
+ accent-color: red;
+  border: 3px solid #d30a0a;
+  
+
 }
