@@ -1,0 +1,22 @@
+
+.qoutes{
+    margin-top: -55px;
+    width: 100%;
+    overflow: scroll;
+    height: 100vh;
+   background-color: black;
+
+}
+.qoutes img{
+     width: 110%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.2;  
+}
+.post{
+    position: relative;
+    z-index: 1;
+    color: white;
+    left: 50ex;
+    top: 25rex;
+}
