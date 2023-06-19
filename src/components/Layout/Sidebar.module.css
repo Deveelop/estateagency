@@ -1,0 +1,27 @@
+.sidebar{
+    position: absolute;
+    height: 100%;
+    width: 200px;
+    padding: 0px;
+    margin-top: 8.5rem;
+    background: #01011f;
+  }
+ 
+  .sidebar li{
+    padding: 25px;
+    list-style-type: none;
+    margin: 0%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+  }
+ 
+  .sidebar li:hover{
+    background: red;
+    cursor: pointer;
+   
+  }
+
+ 
