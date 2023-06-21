@@ -4,13 +4,20 @@ import Header from './components/Layout/Header';
 import EstateQoutes from './components/Estate/EstateQoutes';
 function App() {
   const [isMenu, setIsMenu] = useState(false);
+  const [isVisible, setVisible] = useState(true);
 
-  const openMenu = ( ) => {
+  const openMenu = () => {
     setIsMenu(true);
+    setVisible(false);
+  }
+
+  const closeMenu = () => {
+    setIsMenu(false);
+    setVisible(true);
   }
   return (
     <>
-     <Header onMenu={openMenu}/>
+     <Header onConfirm={isVisible} onClose={closeMenu} onMenu={openMenu}/>
      {isMenu && <Sidebar/>}
      <EstateQoutes/>
     </>
