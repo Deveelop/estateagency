@@ -2,7 +2,7 @@
 .qoutes{
     margin-top: -55px;
     width: 100%;
-    overflow: hidden;
+    overflow: scroll;
     height: 100vh;
    background: linear-gradient(rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.5)), url(../../../public/images/wallpaper.jpg);
 

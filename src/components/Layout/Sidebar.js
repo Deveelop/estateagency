@@ -1,16 +1,15 @@
 import React from 'react'
 import styles from './Sidebar.module.css'
-
+import { Link } from 'react-router-dom'
 function Sidebar() {
   return (
     
     <ul className={styles.sidebar}>
-      <li> Home</li>
+      <Link to='/' className={styles.link}><li>Home</li></Link>
       <li>About Us</li>
-      <li>Contact Us</li>
       <li>FAQ</li>
       <li> Pricing</li>
-      <li>Agent</li> 
+      <Link to='/signup' className={styles.link}><li>Signup</li></Link> 
     </ul>
   )
 }

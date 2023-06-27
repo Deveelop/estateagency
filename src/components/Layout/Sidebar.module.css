@@ -1,21 +1,20 @@
 .sidebar{
-    position: absolute;
+  margin: 80px 0;
+    position: fixed;
     height: 100%;
     width: 200px;
-    padding: 0px;
-    margin-top: 8.5rem;
+    padding: 50px 0px 0px 0px;
     background: #01011f;
   }
  
   .sidebar li{
-    padding: 25px;
+    padding: 35px;
     list-style-type: none;
-    margin: 0%;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
     color: #fff;
+    text-decoration: none;
   }
  
   .sidebar li:hover{
@@ -23,5 +22,8 @@
     cursor: pointer;
    
   }
+.link{
+  text-decoration: none;
+}
 
  

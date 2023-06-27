@@ -1,7 +1,10 @@
 .form{
     display: flex;
     flex-direction: column;
+    
 }
+ 
+
 .form label{
     font-weight: 900;
     padding: 0.5rem 0;
