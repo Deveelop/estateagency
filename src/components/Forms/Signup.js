@@ -1,112 +1,152 @@
-
-import {useState,useRef} from 'react';
+import {useRef} from 'react';
 import styles from './Signup.module.css'
-
+import useInput from '../hooks/use-input';
+import ApiCalls from '../api/api-calls';
 function Signup() {
-    const firstNameInput = useRef();
-    const lastNameInput = useRef();
-   
-    const emailInput = useRef();
-    const phoneInput = useRef();
-    const passwordInput = useRef();
-    const usernameInput = useRef();
-    const confirmPasswordInput = useRef();
-   const signupType = useRef()
+    const {
+    signupApiFunc:sendRequest,
+    errorVar:error,
+    isLoadingVar:isLoading,
+    isSuccessVar:isSuccess,
+    
+    } = ApiCalls();
+    const {
+        value: enteredFirstname, 
+        hasError: firstnameHasError,  
+        valueChangeHandler: firstnameValueChanger, 
+        inputBlurHandler: firstnameInputBlur,
+        reset: resetFirstname
+    } = useInput( value => value.trim() !== '');
 
-    const sendRequest =  async  (text) => { 
-        try{
-    const response = await fetch('https://houserentmanagementsystem-production.up.railway.app/api/user/register', {
-            method: 'POST',
-            body: JSON.stringify(text),
-            headers:{
-                'Content-Type': 'application/json',
-                'Accept': 'application/json'
-            }
-        })
-        if(!response.ok) {
-            throw new Error('Request Failed')
-            
-        }
-        const data = await response.json();
-        console.log(data);
-        
-    } catch (err) {
-        console.log(err)
-        console.log(text)
-    }
-    }
+    const {
+        value: enteredLastname, 
+        hasError: lastnameHasError,  
+        valueChangeHandler: lastnameValueChanger, 
+        inputBlurHandler: lastnameInputBlur,
+        reset: resetLastname
+    } = useInput( value => value.trim() !== '');
+
+    const {
+        value: enteredUsername, 
+        hasError: usernameHasError,  
+        valueChangeHandler: usernameValueChanger, 
+        inputBlurHandler: usernameInputBlur,
+        reset: resetUsername
+    } = useInput( value => value.trim() !== '');
+
+    const {
+        value:enteredEmail,
+        hasError:emailHasError,
+         valueChangeHandler:emailChange,
+         inputBlurHandler:emailInputBlur,
+         reset: resetEmail
+        } = useInput(value => value.includes('@'));
+
+
+    const {
+        value:enteredPassword,
+        hasError:passwordHasError,
+        valueChangeHandler:passwordChange,
+        inputBlurHandler:passwordInputBlur,
+        reset: resetPassword
+          } = useInput(value => value.trim().length > 6);
+
+            const {
+                value:enteredConfirmPassword,
+                hasError:confirmPasswordHasError,
+                valueChangeHandler:confirmPasswordChange,
+                inputBlurHandler: confirmPasswordInputBlur,
+                reset: resetConfirmPassword
+                } = useInput(value => value === enteredPassword);
+ 
+   const signupType = useRef();
+  
+
     const submitHandler = (event) => {
   event.preventDefault();
    
-  const userDetails ={
-    first_name: firstNameInput.current.value,
-    last_name: lastNameInput.current.value,
-  
-    email: emailInput.current.value,
-    username: usernameInput.current.value,
-    phone_number: phoneInput.current.value,
-    password: passwordInput.current.value,
-    confirm_password: confirmPasswordInput.current.value,
+  const userDetails = {
+    first_name: enteredFirstname,
+    last_name: enteredLastname,
+    email: enteredEmail,
+    username: enteredUsername,
+    password: enteredPassword,
+    confirm_password: enteredConfirmPassword,
     signuptype: signupType.current.value
   }
     sendRequest(userDetails);
-    console.log('this is sent', userDetails)
+    resetFirstname();
+    resetLastname();
+    resetEmail();
+    resetUsername();
+   
+    resetPassword();
+    resetConfirmPassword();
     }
   return (
-    <>
-    
+    <div  className={styles.form}>
     
     <form onSubmit={submitHandler}>
-        <div className={styles.form}>
-            <div className={styles.headings}>
-        <h1>SIGNUP FORM</h1>
-        <h4>Kindly Sign Up</h4>
+        <div className={styles.formControl}>
+            <div className={styles.headings}>  
+        <h1 className=' text-[#ff8800] text-xl font-semibold'>Begin a journey to your dream home today!</h1>
         </div>
         <div className={styles.firstlabel}><label>Name</label></div>
         <div className={styles.names}>  
             <div >
-            <input type='text' ref={firstNameInput} />
+            <input type='text' className='text-black' value={enteredFirstname} onBlur={firstnameInputBlur} onChange={firstnameValueChanger} />
             <label>First Name</label>
+            {firstnameHasError && <p className={styles.errorText}>field required</p>}
             </div>
-           
-            
+        
            <div className={styles.inputs}>
-            <input type='text' ref={lastNameInput} />
-            <label>Last Name</label>
+            <input type='text' className='text-black' value={enteredLastname} onBlur={lastnameInputBlur} onChange={lastnameValueChanger} />
+           <label>Last Name</label>
+           {lastnameHasError && <p className={styles.errorText}>field required</p>}
             </div>
+
         </div>
         <div className={styles.firstlabel}>
             <label>E-mail</label>
-            <input type='email' ref={emailInput}/>
+            <input type='email' className='text-black' value={enteredEmail} onBlur={emailInputBlur} onChange={emailChange}/>
+            {emailHasError && <p className={styles.errorText}>Please enter valid email</p>}
         </div>
+
         <div className={styles.firstlabel}>
             <label>Username</label>
-            <input type='text' ref={ usernameInput}/>
+            <input type='text' className='text-black' value={enteredUsername} onBlur={usernameInputBlur} onChange={usernameValueChanger}/>
+            {usernameHasError && <p className={styles.errorText}>field required</p>}
         </div>
-        <div className={styles.firstlabel}>
-            <label>Phone number</label>
-            <input type='number' ref={phoneInput}/>
-        </div>
+
+       
+
         <div className={styles.firstlabel}>
             <label>Password</label>
-            <input type='text' ref={passwordInput}/>
+            <input type='text' className='text-black' value={enteredPassword} onBlur={passwordInputBlur} onChange={passwordChange}/>
+            {passwordHasError && <p className={styles.errorText}>Password must be greater 6</p>}
         </div>
+
         <div className={styles.firstlabel}>
             <label>Confirm password</label>
-            <input type='text' ref={confirmPasswordInput} />
+            <input type='text' className='text-black' value={enteredConfirmPassword} onBlur={confirmPasswordInputBlur} onChange={confirmPasswordChange}/>
+            {confirmPasswordHasError && <p className={styles.errorText}>Password must match</p>}
         </div>
-        <div className={styles.firstlabel}c>
-            <label>SignUp Type</label>
-        <select typeof='text' ref={signupType}>
-            <option>House Owner</option>
-            <option>Tenant</option>
+
+        <div className=' mb-5 m-5 font-bold '>
+            <label className=' font-bold'>SignUp Type</label>
+        <select className='text-black' ref={signupType}>
+            <option className='text-black'>House Owner</option>
+            <option className='text-black'>Tenant</option>
         </select>
         </div>
-        <button >Signup</button>
+
+        <button >{isLoading ? 'Please wait...' : 'Submit'}</button>
+        {error && <p className={styles.errormsg}>{error}</p> }
+        {isSuccess && <p>{isSuccess}</p>}
         </div>
     </form>
+    </div>
     
-    </>
   )
 }
 

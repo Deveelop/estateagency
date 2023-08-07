@@ -1,6 +1,5 @@
-import { useState } from 'react';
+import { useState} from 'react';
 import Sidebar from './components/Layout/Sidebar';
-import Header from './components/Layout/Header';
 import HomeIcon from './components/Layout/HomeIcon'
 import More from './components/Layout/More'
 import styles from './components/Layout/Header.module.css'
@@ -8,6 +7,11 @@ import CloseIcon from '@mui/icons-material/Close';
 import MenuIcon from '@mui/icons-material/Menu';
 import Signup from './components/Forms/Signup';
 import { Routes, Route } from 'react-router-dom';
+import Login from './components/Forms/Login';
+import Header from './components/Layout/Header';
+import Home from './components/pages/Home';
+import Footer from './components/Layout/Footer';
+import purposeContext from './components/store/purpose-context';
 function App() {
   const [isMenu, setIsMenu] = useState(false);
   const [isVisible, setVisible] = useState(true);
@@ -23,26 +27,19 @@ function App() {
   }
   return (
     <>
-    <header className={styles.header}>
-        <span className={styles.icon}>{isVisible ? <MenuIcon  onClick={openMenu} /> : <CloseIcon onClick={closeMenu}/>}</span>
-        
-     <div className={styles.logo}>
-     <span className={styles.icon1}><HomeIcon/></span>
-    
-        <h1>Estate<span className={styles.text}>PRO</span></h1>
-     </div>
-       <span className={styles.icon2}><More/></span>
-       
-    </header>
+    <purposeContext.Provider value={{navFuction: openMenu, navCloseFunc: closeMenu, isMenu:isMenu, isVisible:isVisible}}>
+    <Header/>
      {isMenu && <Sidebar/>}
-     <Routes>
-
-     <Route path='/' element={<Header/>}/>
     
-   
+     <Routes>
+     <Route path='/' element={<Home/>}/>
+     <Route path='/login' element={ <Login/>}/>
      <Route path='/signup' element={<Signup/>}/>
-     
      </Routes>
+ 
+ 
+    <Footer/>
+    </purposeContext.Provider>
     </>
   );
 }

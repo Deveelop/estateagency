@@ -34,7 +34,6 @@ function EstateQoutes() {
       <SearchForm/>
       </div>
     </div>
-
   )
 }
 

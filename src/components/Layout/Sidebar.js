@@ -1,16 +1,19 @@
-import React from 'react'
+import {useContext} from 'react'
 import styles from './Sidebar.module.css'
 import { Link } from 'react-router-dom'
+import purposeContext from '../store/purpose-context'
 function Sidebar() {
+  const ctx = useContext(purposeContext)
   return (
     
-    <ul className={styles.sidebar}>
-      <Link to='/' className={styles.link}><li>Home</li></Link>
-      <li>About Us</li>
-      <li>FAQ</li>
-      <li> Pricing</li>
-      <Link to='/signup' className={styles.link}><li>Signup</li></Link> 
-    </ul>
+    
+      <ul className={styles.sidebar}>
+        <Link to='/' onClick={ctx.navCloseFunc} className={styles.link}><li>Home</li></Link>
+        <Link to='/about'  onClick={ctx.navCloseFunc}  className={styles.link}><li>About us</li></Link> 
+        <Link to='/faq'  onClick={ctx.navCloseFunc} className={styles.link}><li>FAQs</li></Link>
+        <Link to='/categories'  onClick={ctx.navCloseFunc} className={styles.link}><li>Categories</li></Link>
+      </ul>
+    
   )
 }
 
