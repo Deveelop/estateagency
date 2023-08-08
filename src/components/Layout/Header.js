@@ -4,6 +4,8 @@ import More from './More';
 import purposeContext from '../store/purpose-context';
 import HomeIcon from './HomeIcon';
 import styles from './Header.module.css'
+import { Link } from 'react-router-dom';
+
 const Header = () => {
   const ctx = useContext(purposeContext)
   return (
@@ -15,7 +17,12 @@ const Header = () => {
 
     <h1>House<span className={styles.text}>Fair</span></h1>
  </div>
-   <span className={styles.icon2}><More/></span>
+  <ul className='flex gap-10'>
+    <li><Link to='/'>Home</Link></li>
+    <li><Link to='/about'>About us</Link></li>
+    <li><Link to='/categories'>Categories</Link></li>
+    <li>FAQ</li>
+  </ul>
    
 </header>
   )

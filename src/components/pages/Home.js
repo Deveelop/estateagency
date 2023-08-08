@@ -1,10 +1,11 @@
 import React from 'react'
-import EstateQoutes from '../Estate/EstateQoutes'
 import EstatesLocations from '../Estate/EstatesLocations'
+import EstateList from '../Layout/EstateList'
 function Home() {
   return (
     <div>
         <EstatesLocations/>
+        
     </div>
   )
 }

@@ -12,6 +12,7 @@ import Header from './components/Layout/Header';
 import Home from './components/pages/Home';
 import Footer from './components/Layout/Footer';
 import purposeContext from './components/store/purpose-context';
+import Categories from './components/Layout/Categories';
 function App() {
   const [isMenu, setIsMenu] = useState(false);
   const [isVisible, setVisible] = useState(true);
@@ -35,6 +36,7 @@ function App() {
      <Route path='/' element={<Home/>}/>
      <Route path='/login' element={ <Login/>}/>
      <Route path='/signup' element={<Signup/>}/>
+     <Route path='/categories' element={<Categories/>}/>
      </Routes>
  
  
