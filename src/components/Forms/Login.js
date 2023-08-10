@@ -48,7 +48,7 @@ function Login() {
     <div className={styles.actions}>
         <input type='checkbox'/>
         <span>Remember me</span>
-    <p><a href='#'>Forgot Password ?</a></p> 
+    <p><a href='https://'>Forgot Password ?</a></p> 
     </div>
     
     <button>Login</button>

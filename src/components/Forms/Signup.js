@@ -142,7 +142,7 @@ function Signup() {
 
         <button >{isLoading ? 'Please wait...' : 'Submit'}</button>
         {error && <p className={styles.errormsg}>{error}</p> }
-        {isSuccess && <p>{isSuccess}</p>}
+        {isSuccess && <p className={styles.successmsg}>{isSuccess}</p>}
         </div>
     </form>
     </div>

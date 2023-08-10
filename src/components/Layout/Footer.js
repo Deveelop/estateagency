@@ -17,11 +17,10 @@ const Footer = () => {
         <div className="text-gray-400">
           <h1 className="text-white font-bold text-2xl"> Quick Links </h1>
             <div className="pl-3 my-2">
-              <p> Home </p>
-              <p> About Us </p>
-              <p> FAQs </p>
-              <p> Categories </p>
-              <Link to='/login'><p> Accounts </p></Link>
+            <Link to='/'><p> Home </p></Link>
+            <Link to='/about'><p> About us </p></Link>
+            <Link to='/categories'><p> Categories </p></Link>
+            <Link to='/login'><p> Accounts </p></Link>
             </div>
         </div>
 
