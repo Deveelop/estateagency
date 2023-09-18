@@ -8,7 +8,7 @@ const Footer = () => {
 
       <div className="flex flex-col col-span-3 md:col-span-1 py-2">
             {/* logo should be here */}
-            <p>
+            <p className="text-white font-bold text-2xl">
               HouseFair
             </p>
       </div>

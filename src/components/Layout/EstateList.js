@@ -30,15 +30,17 @@ export default function EstateList() {
         />
         <CardContent sx={{ justifyContent: 'flex-end' }}>
           <Typography level="title-lg" textColor="#fff" mb={1}>
-           {items.location}
+           <span>&#8358;</span> {items.location}
           </Typography>
           <Typography
             startDecorator={<LocationOnRoundedIcon />}
             textColor="neutral.300"
           >
             {items.state}
+           
           </Typography>
         </CardContent>
+       
       </Card>
       )
      })

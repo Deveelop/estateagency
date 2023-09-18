@@ -13,13 +13,13 @@ const Header = () => {
  <div className={styles.logo}>
 
 
-    <h1>House<span className={styles.text}>Fair</span></h1>
+    <h1 className=' text-3xl'>House<span className={styles.text}>Fair</span></h1>
  </div>
   <ul className='hidden md:flex gap-10'>
-    <li><Link to='/'>Home</Link></li>
-    <li><Link to='/about'>About us</Link></li>
-    <li><Link to='/categories'>Categories</Link></li>
-    <li><Link to='/login'>Accounts</Link></li>
+    <li className=' text-xl'><Link to='/'>Home</Link></li>
+    <li  className=' text-xl'><Link to='/about'>About us</Link></li>
+    <li  className=' text-xl'><Link to='/categories'>Categories</Link></li>
+    <li  className=' text-xl'><Link to='/login'>Accounts</Link></li>
   </ul>
    
 </header>
