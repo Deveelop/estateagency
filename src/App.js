@@ -8,6 +8,7 @@ import Home from './components/pages/Home';
 import Footer from './components/Layout/Footer';
 import purposeContext from './components/store/purpose-context';
 import Categories from './components/Layout/Categories';
+
 function App() {
   const [isMenu, setIsMenu] = useState(false);
   const [isVisible, setVisible] = useState(true);

@@ -22,6 +22,9 @@ function LocationCarousel() {
     }}
   >
     {DummyLocation.map((item) => (
+      <div onClick={() => {
+        console.log('is it working')
+      }}>
       <Card orientation="horizontal" size="sm" key={item.title} variant="outlined">
         <AspectRatio ratio="1" sx={{ minWidth: 60 }}>
           <img
@@ -35,6 +38,7 @@ function LocationCarousel() {
           <Typography level="body-sm">{item.description}</Typography>
         </Box>
       </Card>
+      </div>
     ))}
   </Box>
   )

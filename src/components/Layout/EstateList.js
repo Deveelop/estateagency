@@ -7,6 +7,9 @@ import LocationOnRoundedIcon from '@mui/icons-material/LocationOnRounded';
 import { HouseData } from './houselist-data';
 
 export default function EstateList() {
+  const defaultFunc = () => {
+    console.log(' Hello vee')
+  }
   return (
     <div className='grid lg:grid-cols-3 gap-10'>
       {
@@ -29,8 +32,11 @@ export default function EstateList() {
           }}
         />
         <CardContent sx={{ justifyContent: 'flex-end' }}>
+        <Typography  level="title-lg" textColor="#fff" mb={15} >
+           <button className=' bg-[red] text-sm p-1 rounded ' >{items.status}</button>
+          </Typography>
           <Typography level="title-lg" textColor="#fff" mb={1}>
-           <span>&#8358;</span> {items.location}
+           <span>&#8358;</span> {items.price}
           </Typography>
           <Typography
             startDecorator={<LocationOnRoundedIcon />}
@@ -38,6 +44,9 @@ export default function EstateList() {
           >
             {items.state}
            
+          </Typography>
+          <Typography  level="title-lg" textColor="#fff" mt={1} >
+           <button className=' bg-[red] p-2 rounded cursor-pointer' onClick={defaultFunc} >Read more</button>
           </Typography>
         </CardContent>
        
