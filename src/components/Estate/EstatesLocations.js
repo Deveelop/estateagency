@@ -26,7 +26,7 @@ function EstatesLocations() {
       repeat={Infinity}
     />   } ?</h1>
       
-        <h2 className='text-white text-xl md:text-3xl font-light mt-5 mb-5'>We tirelessly make your search easy!</h2>
+        <h2 className='text-white text-xl md:text-3xl font-light mt-5 mb-5'>We bring house hunting to your finger tips!!</h2>
        <div className=' hidden sm:flex justify-center '>
       <Link to='/categories' className=" no-underline text-center w-2/5  bg-[#d30a0a] text-white mt-4 mb-2 font-semibold  p-1 px-2 hover:text-[#d30a0a] hover:bg-white hover:shadow-md shadow-black ease-in-out rounded-md h-10 ">
       Explore
