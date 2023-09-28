@@ -33,7 +33,7 @@ export const HouseData = [
     },
     {
         src: "https://paytolet.com/storage/c46f09c7-city-25271-164b28b9357-410x270.jpg",
-        srcset: "https://images.unsplash.com/photo-1542773998-9325f0a098d7?auto=format&fit=crop&w=320&dpr=2 2x",
+        srcset: "https://paytolet.com/storage/c46f09c7-city-25271-164b28b9357-410x270.jpg",
         price: '300000',
         state: 'Vandekya',
         status: 'Rent'
