@@ -8,7 +8,6 @@ function Login() {
   const {loginApiFunc: loginUser} = ApiCalls();
   const {
     value:enteredEmail,
-    hasError:emailHasError,
      valueChangeHandler:emailChange,
      inputBlurHandler:emailInputBlur,
      reset: resetEmail
@@ -16,7 +15,6 @@ function Login() {
 
     const {
       value:enteredPassword,
-      hasError:passwordHasError,
       valueChangeHandler:passwordChange,
       inputBlurHandler:passwordInputBlur,
       reset: resetPassword

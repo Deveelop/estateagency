@@ -5,11 +5,10 @@ import CardContent from '@mui/joy/CardContent';
 import Typography from '@mui/joy/Typography';
 import LocationOnRoundedIcon from '@mui/icons-material/LocationOnRounded';
 import { HouseData } from './houselist-data';
+import { Link } from 'react-router-dom';
 
 export default function EstateList() {
-  const defaultFunc = () => {
-    console.log(' Hello vee')
-  }
+  
   return (
     <div className='grid lg:grid-cols-3 gap-10'>
       {
@@ -46,7 +45,9 @@ export default function EstateList() {
            
           </Typography>
           <Typography  level="title-lg" textColor="#fff" mt={1} >
-           <button className=' bg-[red] p-2 rounded cursor-pointer' onClick={defaultFunc} >Read more</button>
+            <Link to='/propertyinfo'>
+           <button className=' bg-[red] p-2 rounded cursor-pointer' >Read more</button>
+           </Link>
           </Typography>
         </CardContent>
        

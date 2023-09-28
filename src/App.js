@@ -8,6 +8,8 @@ import Home from './components/pages/Home';
 import Footer from './components/Layout/Footer';
 import purposeContext from './components/store/purpose-context';
 import Categories from './components/Layout/Categories';
+import PropertyInfo from './components/Layout/PropertyInfo';
+import About from './components/pages/About';
 
 function App() {
   const [isMenu, setIsMenu] = useState(false);
@@ -34,6 +36,9 @@ function App() {
      <Route path='/login' element={ <Login/>}/>
      <Route path='/signup' element={<Signup/>}/>
      <Route path='/categories' element={<Categories/>}/>
+     <Route path='/propertyinfo' element={<PropertyInfo/>}/>
+     <Route path='/about' element={<About/>}/>
+
      </Routes>
  
  
