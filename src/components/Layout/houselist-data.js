@@ -1,7 +1,7 @@
 export const HouseData = [
     {
         src: "https://paytolet.com/storage/cities/awka247-410x270.jpg",
-        srcset: "https://images.unsplash.com/photo-1542773998-9325f0a098d7?auto=format&fit=crop&w=320&dpr=2 2x",
+        srcset: "https://paytolet.com/storage/cities/awka247-410x270.jpg",
         price: '80000',
         state: 'Gboko',
         status: 'Rent'
@@ -9,7 +9,7 @@ export const HouseData = [
     },
     {
         src: "https://paytolet.com/storage/9-amazing-beach-resorts-you-should-visit-in-lagos-on-your-next-vacation-410x270.jpg",
-        srcset: "https://images.unsplash.com/photo-1542773998-9325f0a098d7?auto=format&fit=crop&w=320&dpr=2 2x",
+        srcset: "https://paytolet.com/storage/9-amazing-beach-resorts-you-should-visit-in-lagos-on-your-next-vacation-410x270.jpg",
         price: '200000',
         state: 'Makurdi',
         status: 'Sale'
@@ -17,7 +17,7 @@ export const HouseData = [
     },
     {
         src: "https://paytolet.com/storage/general/download-1-410x270.jpg",
-        srcset: "https://images.unsplash.com/photo-1542773998-9325f0a098d7?auto=format&fit=crop&w=320&dpr=2 2x",
+        srcset: "https://paytolet.com/storage/general/download-1-410x270.jpg",
         price: '150000',
         state: 'Oturpko',
         status: 'Rent'
@@ -25,7 +25,7 @@ export const HouseData = [
     },
     {
         src: "https://paytolet.com/storage/download-1-410x270-410x270.jpg",
-        srcset: "https://images.unsplash.com/photo-1542773998-9325f0a098d7?auto=format&fit=crop&w=320&dpr=2 2x",
+        srcset: "https://paytolet.com/storage/download-1-410x270-410x270.jpg",
         price: '60000',
         state: 'Oju',
         status: 'Sale'
