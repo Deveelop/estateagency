@@ -65,40 +65,41 @@ function PropertyInfo() {
     </div>
     </div>
     </div>
-    <div className=' flex justify-center'>
-    <div className=''>
-    <div className=''>
-    <h2 className='text-3xl  text-red-400 font-bold text-center m-5 '>Contact Agent</h2>
-    </div>
-     <div className=' flex justify-center'>
-    <img src='/images/user-01.jpg' alt='Agent'/>
-    </div>
-    <div className='AgentName'>
-    <h4 className=' font-bold text-2xl p-4 text-center'>Ugozi Eze</h4>
-    </div>
-
-    <div className=' flex justify-center'>
-    <p className=' sm:w-[50%] p-4 text-xl'>Hello! My name is Ugozi Eze and i'm a full-time licensed real estate agent and I've been helping my clients achieve the "Lagos Dream" since 1990. I've been working at this same agency for over 15 years! You can always reach me directly via the phone number below.
-    </p>
-    </div>
-
-    <div className=' flex justify-center'>
-      <div>
-    <div className=' flex '><span><FaPhone className='text-red-400 text-2xl'/></span> <span className=' ml-4 text-2xl'>08065032361</span></div>
-    <div className=' flex'><span><FaPhone className='text-red-400 text-2xl'/></span><span className=' ml-4 text-2xl'>08065032361</span></div>
-
-    <ul className=' flex m-5 justify-center'>
-    <li><FaFacebook className=' text-red-400 text-2xl ml-2'/></li>
-    <li><FaTwitter className='text-red-400 text-2xl ml-2'/></li>
-    <li><FaGooglePlus className='text-red-400 text-2xl ml-2'/></li>
-    </ul>
-    </div>
-    </div>
-    </div>
-    </div>
-
+  
     </div>
   )
 }
 
 export default PropertyInfo;
+
+/* <div className=' flex justify-center'>
+<div className=''>
+<div className=''>
+<h2 className='text-3xl  text-red-400 font-bold text-center m-5 '>Contact Agent</h2>
+</div>
+ <div className=' flex justify-center'>
+<img src='/images/user-01.jpg' alt='Agent'/>
+</div>
+<div className='AgentName'>
+<h4 className=' font-bold text-2xl p-4 text-center'>Ugozi Eze</h4>
+</div>
+
+<div className=' flex justify-center'>
+<p className=' sm:w-[50%] p-4 text-xl'>Hello! My name is Ugozi Eze and i'm a full-time licensed real estate agent and I've been helping my clients achieve the "Lagos Dream" since 1990. I've been working at this same agency for over 15 years! You can always reach me directly via the phone number below.
+</p>
+</div>
+
+<div className=' flex justify-center'>
+  <div>
+<div className=' flex '><span><FaPhone className='text-red-400 text-2xl'/></span> <span className=' ml-4 text-2xl'>08065032361</span></div>
+<div className=' flex'><span><FaPhone className='text-red-400 text-2xl'/></span><span className=' ml-4 text-2xl'>08065032361</span></div>
+
+<ul className=' flex m-5 justify-center'>
+<li><FaFacebook className=' text-red-400 text-2xl ml-2'/></li>
+<li><FaTwitter className='text-red-400 text-2xl ml-2'/></li>
+<li><FaGooglePlus className='text-red-400 text-2xl ml-2'/></li>
+</ul>
+</div>
+</div>
+</div>
+</div> */
