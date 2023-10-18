@@ -8,6 +8,8 @@ function ApiCalls() {
  
 
     const loginRequest =  async  (text) => { 
+        setIsLoading(true);
+        setError(null);
         try{
     const response = await fetch('https://houserentmanagementsystem-production.up.railway.app/api/login', {
             method: 'POST',
@@ -22,12 +24,15 @@ function ApiCalls() {
            throw new Error('Failed to submit');    
         } else{
          console.log('errrr')
+         setIsSuccess('Logining...');
         }
         const data = await  response.json();
         console.log(data);
     } catch (err) {
+        setError(err.message || 'Unsuccesfull. Try again!') 
         console.log(err) 
     }
+    setIsLoading(false);
     }
 
     

@@ -5,7 +5,7 @@ import ApiCalls from '../api/api-calls';
 import { Link } from 'react-router-dom';
 
 function Login() {
-  const {loginApiFunc: loginUser} = ApiCalls();
+  const {loginApiFunc: loginUser, errorVar: error , isLoadingVar: isLoading, isSuccessVar: isSuccess} = ApiCalls();
   const {
     value:enteredEmail,
      valueChangeHandler:emailChange,
@@ -39,7 +39,7 @@ function Login() {
     <div className={styles.formControl}>
      <label>E-mail</label>
       <input type='email' name='email' value={enteredEmail} onChange={emailChange} onBlur={emailInputBlur} />
-    
+    {}
       <label>Password</label>
       <input type='text' value={enteredPassword} onChange={passwordChange} onBlur={passwordInputBlur}/>
     </div>
@@ -49,7 +49,8 @@ function Login() {
     <p><a href='https://'>Forgot Password ?</a></p> 
     </div>
     
-    <button>Login</button>
+    <button>{ isLoading ? 'Logining...' : 'Login'}</button>
+    {error && <p>{error}</p> }
     
         </form>
 
